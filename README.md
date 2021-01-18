@@ -5,7 +5,7 @@ This code generates mixed images by concatenating two half images obtained from 
 
 ## Data Setting
 
-Basically, you should organize your train directory to use torchvision.datasets.ImageFolder.
+Basically, you should organize your directory to use torchvision.datasets.ImageFolder.
 
 + Custom dataset - use the following data structure (characteristic for PyTorch):
     ```
