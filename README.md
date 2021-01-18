@@ -1,11 +1,11 @@
 # Data Augmentation - Mixed Images
 
-This code generates mixed images by concatenating two half images obtained from each image and save the images in a new parent folder './data/mixedimages'. 
+This code generates mixed images by concatenating two half images obtained from each image having the same label, and save the images in a new parent folder './data/mixedimages'. 
 
 
 ## Data Setting
 
-Basically, you should organize your directory to use torchvision.datasets.ImageFolder.
+Basically, you should organize your data directory to use torchvision.datasets.ImageFolder.
 
 + Custom dataset - use the following data structure (characteristic for PyTorch):
     ```
@@ -60,4 +60,7 @@ import torch
         exit(0)
 ```
 ## Image Sample
-<img width="458" alt="Screen Shot 2021-01-18 at 9 14 10 AM" src="https://user-images.githubusercontent.com/52735725/104888840-991c2d00-596d-11eb-9792-f1c74e82deff.png">
+
+class: car
+
+<img width="500" alt="Screen Shot 2021-01-18 at 10 09 56 AM" src="https://user-images.githubusercontent.com/52735725/104894781-68d88c80-5975-11eb-850e-5a2605d83589.png">
