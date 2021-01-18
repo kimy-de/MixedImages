@@ -42,7 +42,7 @@ import torch
 
     Generator = False
     if Generator == True:
-        mixedimageloader('./data/train', 10, 80)
+        mixedimageloader('./data/train', 10, 80) # generate ten 80x80 mixed images each class
 
     trans = transforms.Compose([transforms.Resize((80,80)), transforms.ToTensor()])
     dataset = ImageFolder(root='./data/train', transform=trans)
