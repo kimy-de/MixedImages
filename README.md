@@ -36,28 +36,28 @@ Basically, you should organize your data directory to use torchvision.datasets.I
 The train and mixedimage sets are gathered by torch.utils.data.ConcatDataset.
 ```python
 import torch
-    from torchvision.datasets import ImageFolder
-    from torch.utils.data import DataLoader
-    import torchvision.transforms as transforms
+from torchvision.datasets import ImageFolder
+from torch.utils.data import DataLoader
+import torchvision.transforms as transforms
 
-    Generator = False
-    if Generator == True:
-        mixedimageloader('./data/train', 10, 80) # generate ten 80x80 mixed images each class
+Generator = False
+if Generator == True:
+    mixedimageloader('./data/train', 10, 80) # generate ten 80x80 mixed images each class
 
-    trans = transforms.Compose([transforms.Resize((80,80)), transforms.ToTensor()])
-    dataset = ImageFolder(root='./data/train', transform=trans)
-    mixedbook = ImageFolder(root='./data/mixedimages', transform=trans)
-    l = []
-    l.append(dataset)
-    l.append(mixedbook)
-    concatdataset = torch.utils.data.ConcatDataset(l)
+trans = transforms.Compose([transforms.Resize((80,80)), transforms.ToTensor()])
+dataset = ImageFolder(root='./data/train', transform=trans)
+mixedbook = ImageFolder(root='./data/mixedimages', transform=trans)
+l = []
+l.append(dataset)
+l.append(mixedbook)
+concatdataset = torch.utils.data.ConcatDataset(l)
 
-    trainloader = DataLoader(concatdataset, batch_size=30, shuffle=True)
+trainloader = DataLoader(concatdataset, batch_size=30, shuffle=True)
 
-    for imgs, labels in trainloader:
-        #print(imgs)
-        print(imgs.size(), labels.size())
-        exit(0)
+for imgs, labels in trainloader:
+    #print(imgs)
+    print(imgs.size(), labels.size())
+    exit(0)
 ```
 ## Image Sample
 
