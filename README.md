@@ -1,4 +1,4 @@
-# Data Augmentation - Mixed Images
+# Data Augmentation - Mixed Images (Pytorch)
 
 This code generates mixed images by concatenating two half images obtained from each image having the same label, and save the images in a new parent folder './data/mixedimages'. 
 
